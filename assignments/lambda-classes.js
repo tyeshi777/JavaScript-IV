@@ -42,10 +42,9 @@ class Student extends Instructor {
     this.grade = studentAttributes.grade;
   }
   listsSubjects() {
-    let x = Student;
-    // for (let i = 0; i < x.length; i++) {
-    console.log(x);
-    // }
+    for (let i = 0; i < this.favSubjects.length; i++) {
+      console.log(this.favSubjects[i]);
+    }
   }
   PRAssignment() {
     console.log(`${this.name} has submitted a PR for ${this.subject}.`);
@@ -172,4 +171,4 @@ const maxie = new ProjectManager({
   channel: "codingDojos"
 });
 
-console.log(maxie.standUp());
+console.log(tenzing.listsSubjects());
