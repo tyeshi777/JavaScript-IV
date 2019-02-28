@@ -26,8 +26,10 @@ class Instructor extends Person {
   demo(subject) {
     console.log(`Today we are learning about ${subject}.`);
   }
-  grade(tenzing, subject) {
-    console.log(`${tenzing.name} receives a perfect score on ${subject}.`);
+  grade(x, subject) {
+    console.log(
+      `${x.name} receives a perfect score of ${x.grade} on ${subject}.`
+    );
   }
 }
 
@@ -51,6 +53,13 @@ class Student extends Instructor {
   }
   sprintChallenge() {
     console.log(`${this.name} has begun sprint challenge on ${this.subject}.`);
+  }
+  graduate() {
+    if (this.grade > 80) {
+      console.log(`${this.name} you are ready to graduate.`);
+    } else {
+      console.log(`You need your grade to be over 80.`);
+    }
   }
 }
 
@@ -171,4 +180,4 @@ const maxie = new ProjectManager({
   channel: "codingDojos"
 });
 
-console.log(tenzing.listsSubjects());
+console.log(john.grade(dolma, "python"));
