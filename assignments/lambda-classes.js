@@ -27,9 +27,15 @@ class Instructor extends Person {
     console.log(`Today we are learning about ${subject}.`);
   }
   grade(x, subject) {
-    console.log(
-      `${x.name} receives a perfect score of ${x.grade} on ${subject}.`
-    );
+    if (x.grade > 80) {
+      console.log(
+        `${x.name} receives a perfect score of ${x.grade} on ${subject}.`
+      );
+    } else {
+      console.log(
+        `${x.name} receives a weak score of ${x.grade} on ${subject}.`
+      );
+    }
   }
 }
 
